@@ -1,0 +1,84 @@
+{{!-- {{#each}}
+	<a href="/patients/newPatient" class="btn btn-primary">Add Patient</a>
+{{/each}} --}}
+
+<form action="" method="POST" class="validated-form" novalidate>
+	<div class="mb-3">
+		<label for="PulseRate" class="form-label">Pulse Rate (bpm)</label>
+		<input
+			type="text"
+			class="form-control"
+			id="PulseRate"
+			name="PulseRate"
+			required
+		/>
+		<div class="valid-feedback">Looks good!</div>
+	</div>
+	<div class="mb-3">
+		<label for="RespiratoryRate" class="form-label">Respiratory Rate
+			(cycles)</label>
+		<input
+			type="text"
+			class="form-control"
+			id="RespiratoryRate"
+			name="RespiratoryRate"
+			required
+		/>
+		<div class="valid-feedback">Looks good!</div>
+	</div>
+	<div class="my-3">
+		<h6>Blood Pressure (mm Hg)</h6>
+		<div class="mb-3">
+			<label for="BpSystolic" class="form-label">Systolic</label>
+			<input
+				type="text"
+				class="form-control"
+				id="BpSystolic"
+				name="BpSystolic"
+				required
+			/>
+			<div class="valid-feedback">Looks good!</div>
+		</div>
+		<div class="mb-3">
+			<label for="BpDiastolic" class="form-label">Diastolic</label>
+			<input
+				type="text"
+				class="form-control"
+				id="BpDiastolic"
+				name="BpDiastolic"
+				required
+			/>
+			<div class="valid-feedback">Looks good!</div>
+		</div>
+	</div>
+	<div class="mb-3">
+		<label for="SpO2" class="form-label">SpO2 (%)</label>
+		<input
+			type="text"
+			class="form-control"
+			id="SpO2"
+			name="SpO2"
+			required
+		/>
+		<div class="valid-feedback">Looks good!</div>
+	</div>
+	<div class="mb-3">
+		<label for="Temperature" class="form-label">Temperature (F)</label>
+		<input
+			type="text"
+			class="form-control"
+			id="Temperature"
+			name="Temperature"
+			required
+		/>
+		<div class="valid-feedback">Looks good!</div>
+	</div>
+	<div class="mb-3">
+		<label for="O2" class="form-label">Room Air (O2 in litres)</label>
+		<input type="text" class="form-control" id="O2" name="O2" value="22" />
+		<div class="valid-feedback">Looks good!</div>
+	</div>
+	<button type="submit" class="btn btn-primary">Add</button>
+	{{! <button href="" class="btn btn-primary">Send</button>
+	<button type="submit" class="btn btn-primary">Back</button> }}
+</form>

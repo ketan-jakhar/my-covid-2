@@ -1,0 +1,27 @@
+<div class="my-3">
+	<label for="PhoneNumber" class="form-label">Phone number</label>
+	<input
+		type="text"
+		class="form-control"
+		id="PhoneNumber"
+		name="PhoneNumber"
+	/>
+
+</div>
+<button
+	type="submit"
+	id="getOTP"
+	onClick="sendOTP()"
+	class="btn btn-primary"
+>Get OTP</button>
+
+<div class="my-3">
+	<label for="otp" class="form-label">otp</label>
+	<input type="text" class="form-control" id="otp" name="otp" />
+</div>
+<button
+	type="submit"
+	onClick="verify()"
+	id="SubmitButton"
+	class="btn btn-primary"
+>Submit</button>

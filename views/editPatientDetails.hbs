@@ -1,0 +1,102 @@
+<a href="/patients" class="btn btn-primary">All Patients</a>
+{{#if flash}}
+	<div class="alert alert-success alert-dismissible fade show" role="alert">
+
+		{{flash}}
+		<button
+			type="button"
+			class="btn-close"
+			data-bs-dismiss="alert"
+			aria-label="Close"
+		></button>
+	</div>
+{{/if}}
+{{#each rows}}
+	<form
+		action="/patients/editPatient/{{this.PatientId}}"
+		method="POST"
+		class="validated-form"
+		novalidate
+	>
+		<div class="mb-3">
+			<label for="FirstName" class="form-label">First Name</label>
+			<input
+				type="text"
+				class="form-control"
+				id="FirstName"
+				name="FirstName"
+				value="{{this.FirstName}}"
+				required
+			/>
+			<div class="valid-feedback">Looks good!</div>
+		</div>
+		<div class="mb-3">
+			<label for="MiddleName" class="form-label">Middle Name</label>
+			<input
+				type="text"
+				class="form-control"
+				id="MiddleName"
+				name="MiddleName"
+				value="{{this.MiddleName}}"
+			/>
+		</div>
+		<div class="mb-3">
+			<label for="LastName" class="form-label">Last Name</label>
+			<input
+				type="text"
+				class="form-control"
+				id="LastName"
+				name="LastName"
+				value="{{this.LastName}}"
+				required
+			/>
+			<div class="valid-feedback">Looks good!</div>
+		</div>
+
+		<div class="mb-3">
+			<label for="PhoneNumber" class="form-label">Contact Number</label>
+			<input
+				type="text"
+				class="form-control"
+				id="PhoneNumber"
+				name="PhoneNumber"
+				value="{{this.PhoneNumber}}"
+				required
+			/>
+			<div class="valid-feedback">Looks good!</div>
+		</div>
+		<div class="mb-3">
+			<label for="RelativeName" class="form-label">Relative Name</label>
+			<input
+				type="text"
+				class="form-control"
+				id="RelativeName"
+				name="RelativeName"
+				value="{{this.RelativeName}}"
+			/>
+		</div>
+		<div class="mb-3">
+			<label for="RelativePhoneNumber" class="form-label">Relative Phone
+				Number</label>
+			<input
+				type="text"
+				class="form-control"
+				id="RelativePhoneNumber"
+				name="RelativePhoneNumber"
+				value="{{this.RelativePhoneNumber}}"
+			/>
+		</div>
+		<div class="mb-3">
+			<label for="Relationship" class="form-label">Relationship</label>
+			<input
+				type="text"
+				class="form-control"
+				id="Relationship"
+				name="Relationship"
+				value="{{this.Relationship}}"
+			/>
+		</div>
+		<button type="submit" class="btn btn-primary">Update</button>
+
+	</form>
+{{/each}}

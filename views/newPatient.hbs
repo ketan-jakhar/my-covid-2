@@ -1,0 +1,97 @@
+<a href="/patients" class="btn btn-primary">All Patients</a>
+
+<form
+	action="/patients/newPatient"
+	method="POST"
+	class="validated-form"
+	novalidate
+>
+
+	<div class="mb-3">
+		<label for="FirstName" class="form-label">First Name</label>
+		<input
+			type="text"
+			class="form-control"
+			id="FirstName"
+			name="FirstName"
+			required
+		/>
+		<div class="valid-feedback">Looks good!</div>
+	</div>
+	<div class="mb-3">
+		<label for="MiddleName" class="form-label">Middle Name</label>
+		<input
+			type="text"
+			class="form-control"
+			id="MiddleName"
+			name="MiddleName"
+		/>
+	</div>
+	<div class="mb-3">
+		<label for="LastName" class="form-label">Last Name</label>
+		<input
+			type="text"
+			class="form-control"
+			id="LastName"
+			name="LastName"
+			required
+		/>
+		<div class="valid-feedback">Looks good!</div>
+	</div>
+
+	<div class="mb-3">
+		<label for="PhoneNumber" class="form-label">Contact Number</label>
+		<input
+			type="text"
+			class="form-control"
+			id="PhoneNumber"
+			name="PhoneNumber"
+			required
+		/>
+		<div class="valid-feedback">Looks good!</div>
+	</div>
+	<div class="mb-3">
+		<label for="RelativeName" class="form-label">Relative Name</label>
+		<input
+			type="text"
+			class="form-control"
+			id="RelativeName"
+			name="RelativeName"
+		/>
+	</div>
+	<div class="mb-3">
+		<label for="RelativePhoneNumber" class="form-label">Relative Phone
+			Number</label>
+		<input
+			type="text"
+			class="form-control"
+			id="RelativePhoneNumber"
+			name="RelativePhoneNumber"
+		/>
+	</div>
+	<div class="mb-3">
+		<label for="Relationship" class="form-label">Relationship</label>
+		<input
+			type="text"
+			class="form-control"
+			id="Relationship"
+			name="Relationship"
+		/>
+	</div>
+	<div class="mb-3">
+		<label
+			for="AdmissionDatetime"
+			class="form-label"
+		>AdmissionDatetime</label>
+		<input
+			type="text"
+			class="form-control"
+			id="AdmissionDatetime"
+			name="AdmissionDatetime"
+			value=""
+			disabled
+		/>
+	</div>
+	<button type="submit" class="btn btn-primary">Create</button>
+
+</form>

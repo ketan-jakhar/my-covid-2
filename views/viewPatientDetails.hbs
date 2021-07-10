@@ -1,0 +1,107 @@
+<a href="/patients" class="btn btn-primary">All Patients</a>
+
+{{#each personalDetails}}
+	<div class="view-user">
+		<div class="col text-center">
+			<h1>{{this.FirstName}} {{this.MiddleName}} {{this.LastName}}</h1>
+		</div>
+	</div>
+	<div class="row mt-3">
+		<div class="col">
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th scope="col">First Name</th>
+						<th scope="col">Middle Name</th>
+						<th scope="col">Last Name</th>
+						<th scope="col">Phone Number</th>
+						<th scope="col">Admission Date</th>
+
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>{{this.FirstName}}</td>
+						<td>{{this.MiddleName}}</td>
+						<td>{{this.LastName}}</td>
+						<td>{{this.PhoneNumber}}</td>
+						<td>{{this.AdmissionDatetime}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+{{/each}}
+
+<div class="view-user mt-5">
+	<div class="col text-center">
+		<h3>Family details</h3>
+	</div>
+</div>
+
+<div class="row mt-3">
+	<div class="col">
+		<table class="table table-bordered table-hover">
+			<thead>
+				<tr>
+					<th scope="col">Relative's Name</th>
+					<th scope="col">Relationship</th>
+					<th scope="col">Contact Number</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					{{#each personalDetails}}
+						<td>{{this.RelativeName}}</td>
+						<td>{{this.Relationship}}</td>
+						<td>{{this.RelativePhoneNumber}}</td>
+					{{/each}}
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<div class="view-user mt-5">
+	<div class="col text-center">
+		<h3>Vitals</h3>
+	</div>
+</div>
+
+{{#each personalDetails}}
+	<a
+		href="/patients/viewPatient/{{this.PatientId}}/updateVitals"
+		class="btn btn-primary"
+	>Update Vitals</a>
+{{/each}}
+
+<div class="row mt-3">
+	<div class="col">
+		<table class="table table-bordered table-hover">
+			<thead>
+				<tr>
+					<th scope="col">Last updated</th>
+					<th scope="col">Updated by</th>
+					<th scope="col">Pulse Rate(BPM)</th>
+					<th scope="col">Respiratory Rate(cycles)</th>
+					<th scope="col">Blood Pressure(mm Hg)</th>
+					<th scope="col">SpO2(%)</th>
+					<th scope="col">Room Air (O2 in litres)</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#each vitals}}
+					<tr>
+						<td>{{this.StatusDatetime}}</td>
+						<td>-</td>
+						<td>{{this.PulseRate}}</td>
+						<td>{{this.RespiratoryRate}}</td>
+						<td>{{this.BpSystolic}}/{{this.BpDiastolic}}</td>
+						<td>{{this.SpO2}}</td>
+						<td>{{this.O2}}</td>
+					</tr>
+				{{/each}}
+			</tbody>
+		</table>
+	</div>
+</div>
